@@ -18,7 +18,7 @@ theme.font          = "fira code nerd font 8"
 theme.bg_normal     = c.d1
 theme.bg_focus      = c.d1
 theme.bg_urgent     = c.red
-theme.bg_minimize   = c.d2
+theme.bg_minimize   = c.d1
 theme.bg_systray    = c.d1
 
 theme.fg_normal     = c.l3

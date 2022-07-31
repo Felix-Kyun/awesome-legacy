@@ -7,20 +7,37 @@ local beautiful = require("beautiful")
 
 
 local help_text = [[
-  awesome help widget 
-  mod + return -> terminal 
-  mod + b      -> browser
+    TODO 
+ [ ] awesome config rewrite
+ [ ] nvim conifg 
+ [ ] polybar
+ [ ] rofi scripts
+ [ ] fix keybinds
+ [ ] enforce nord 
+ [ ] fix console font
+ [ ] and color
+ [ ] lockscreen 
+ 
+    LEARN
+ [ ] nvim
+ [ ] lua
+ [ ] git 
+
+    BUILD
+ [ ] revanced 
+ [ ] tglib
+ [x] kitty
+
 ]]
 
 
-
-
 local canvas = wibox {
-      visible = true,
-    height = 100,
+    visible = true,
+    height = 300,
     width = 200,
+--    opacity = 0.6,
     shape = function(cr, width, height)
-        gears.shape.rounded_rect(cr, width, height, 10)
+        gears.shape.rounded_rect(cr, width, height, 0)
     end
 }
 

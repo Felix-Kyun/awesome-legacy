@@ -1,6 +1,6 @@
 
 
-terminal = "urxvt"
+terminal = "/home/felix/.local/bin/kitten"
 
 editor = os.getenv("EDITOR") or "nvim"
 

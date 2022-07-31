@@ -7,7 +7,7 @@
 local c = {}
 
 -- polar night [dark] 
-c.d1 = "#2E3440"
+c.d1 = "#2E3440" .. "80"
 c.d2 = "#3B4252"
 c.d3 = "#434C5E"
 c.d4 = "#4C566A"

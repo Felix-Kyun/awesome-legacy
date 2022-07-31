@@ -1,3 +1,4 @@
+--  vim:fileencoding=utf-8:foldmethod=marker
 pcall(require, "luarocks.loader")
 
 local gears = require("gears")
@@ -30,6 +31,7 @@ split_conf("mouse")     -- load mouse bindings
 -- load key binds
 local wm_keys = require("config.keys.workspace")
 local user_apps = require("config.keys.user_apps")
+local kp_bind = require("config.keys.wm")
 -- local layout_keys = require("config.keys.")
 -- local layout_keys = require("config.keys.")
 -- require("config.core.titlebar")
@@ -38,6 +40,7 @@ local user_apps = require("config.keys.user_apps")
 globalkeys = gears.table.join(
     wm_keys,
     user_apps,
+    kp_bind,
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
@@ -346,6 +349,7 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
+-- border shaping {{{
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 client.connect_signal("manage", function (c)

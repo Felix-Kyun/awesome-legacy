@@ -42,16 +42,6 @@ local _M = gears.table.join(
   {}, "Print",
   function () awful.spawn.with_shell(bin .. "sscrot")  end,
   {description = "Take ScreenShot", group = "applications"}
-  ),
-  awful.key(
-  {modkey}, "KP_Begin",
-  function() awful.util.spawn(bin .. "launcher") end,
-  {description = "kp middle", group = "applications"}
-  ),
-  awful.key(
-  {modkey}, "KP_Prior",
-  function() awful.util.spawn(bin .. "powermenu") end,
-  {description = "kp middle", group = "applications"}
   )
 )
 
